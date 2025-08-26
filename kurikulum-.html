@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kurikulum dan Program Pendidikan Pondok Pesantren Tahfizhul Qur'an Al Ittiba' untuk jenjang Ibtidaiyah, Tsanawiyah, dan Aliyah.">
+    <meta name="keywords" content="kurikulum pesantren, daftar mapel, modul pendidikan, tahfizh, diniyah, ilmu syariah, pendidikan umum, Ibtidaiyah, Tsanawiyah, Aliyah">
+    <meta name="author" content="Pondok Pesantren Tahfizhul Qur'an Al Ittiba'">
+    <title>Kurikulum - Pondok Pesantren Tahfizhul Qur'an Al Ittiba'</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Bootstrap Icons CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa;
+            color: #343a40;
+        }
+        .navbar {
+            background-color: #007bff !important; /* Primary blue */
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .navbar-brand, .nav-link {
+            color: #fff !important;
+            font-weight: 500;
+        }
+        .nav-link:hover {
+            color: #e2e6ea !important;
+        }
+        .hero-kurikulum-section {
+            background: linear-gradient(rgba(0, 123, 255, 0.7), rgba(0, 123, 255, 0.9)), url('https://placehold.co/1920x400/007bff/ffffff?text=Kurikulum+Pendidikan') no-repeat center center;
+            background-size: cover;
+            color: #fff;
+            padding: 100px 0;
+            text-align: center;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            animation: fadeIn 1.5s ease-out;
+        }
+        .hero-kurikulum-section h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            animation: slideInUp 1s ease-out;
+        }
+        .hero-kurikulum-section p {
+            font-size: 1.25rem;
+            animation: fadeIn 2s ease-out;
+        }
+        .section-padding {
+            padding: 80px 0;
+        }
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #007bff;
+            margin-bottom: 50px;
+            text-align: center;
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            width: 80px;
+            height: 4px;
+            background-color: #007bff;
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+        .card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+        }
+        .card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        .card-header {
+            background: linear-gradient(to right, #007bff, #0056b3);
+            color: #fff;
+            font-weight: 600;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            padding: 15px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .card-body ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 0; /* Remove default margin */
+        }
+        .card-body ul li {
+            padding: 8px 0;
+            border-bottom: 1px dashed #e9ecef;
+        }
+        .card-body ul li:last-child {
+            border-bottom: none;
+        }
+        .icon-large {
+            font-size: 3rem;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+        .list-item-icon {
+            font-size: 1.2rem;
+            margin-right: 10px;
+            color: #007bff;
+        }
+        .program-category-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #007bff;
+            margin-top: 20px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .program-category-list li {
+            display: flex;
+            align-items: flex-start;
+            padding: 5px 0;
+            font-size: 0.95rem;
+        }
+        .program-category-list li .bi {
+            flex-shrink: 0;
+            margin-top: 3px;
+            margin-right: 8px;
+            color: #28a745; /* Green checkmark */
+        }
+        footer {
+            background-color: #343a40;
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+        }
+        footer p {
+            margin-bottom: 0;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideInUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .animate-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Pondok Pesantren Al Ittiba'</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#beranda">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#tentang">Tentang Kami</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#jenjang">Jenjang Pendidikan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="kurikulum.html">Kurikulum</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#kontak">Kontak</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="psb.html">PSB</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section for Kurikulum -->
+    <section class="hero-kurikulum-section d-flex align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <h1>Kurikulum & Modul Pendidikan</h1>
+                    <p class="lead">Mempelajari Al-Qur'an dan Ilmu Syariah, didukung Pendidikan Umum dan Keterampilan Hidup.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kurikulum Details Section -->
+    <section id="kurikulum-details" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Kurikulum Per Jenjang</h2>
+            <div class="row g-4">
+                <!-- Ibtidaiyah Curriculum Card -->
+                <div class="col-lg-4 animate-on-scroll">
+                    <div class="card h-100">
+                        <div class="card-header">
+                            <i class="bi bi-book icon-large"></i>
+                            Marhalah Ibtidaiyah
+                            <small class="d-block mt-1">(Setingkat SD/MI)</small>
+                        </div>
+                        <div class="card-body text-start">
+                            <h5 class="program-category-title">Tahfizh Al-Qur'an</h5>
+                            <ul class="program-category-list">
+                                <li><i class="bi bi-check-circle-fill"></i> Target Hafalan: Juz 30, Juz 29 (bertahap)</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Metode: Talaqqi, Murajaah harian</li>
+                            </ul>
+
+                            <h5 class="program-category-title">Diniyah & Ilmu Syari'ah</h5>
+                            <ul class="program-category-list">
+                                <li><i class="bi bi-check-circle-fill"></i> Aqidah Dasar</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Fikih Ibadah Praktis (Thaharah, Shalat)</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Akhlak Anak Muslim</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Doa Harian & Hadits Pilihan</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Pengenalan Bahasa Arab (Mufradat Dasar)</li>
+                            </ul>
+
+                            <h5 class="program-category-title">Pendidikan Umum (PKBM)</h5>
+                            <ul class="program-category-list">
+                                <li><i class="bi bi-check-circle-fill"></i> Matematika Dasar</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Bahasa Indonesia</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Ilmu Pengetahuan Alam (Dasar)</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Ilmu Pengetahuan Sosial (Dasar)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tsanawiyah Curriculum Card -->
+                <div class="col-lg-4 animate-on-scroll">
+                    <div class="card h-100">
+                        <div class="card-header">
+                            <i class="bi bi-mortarboard icon-large"></i>
+                            Marhalah Tsanawiyah
+                            <small class="d-block mt-1">(Setingkat SMP/MTs)</small>
+                        </div>
+                        <div class="card-body text-start">
+                            <h5 class="program-category-title">Tahfizh Al-Qur'an</h5>
+                            <ul class="program-category-list">
+                                <li><i class="bi bi-check-circle-fill"></i> Target Hafalan: Juz 1-10 (bertahap)</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Metode: Setoran, Murajaah, Tasmi'</li>
+                            </ul>
+
+                            <h5 class="program-category-title">Diniyah & Ilmu Syari'ah</h5>
+                            <ul class="program-category-list">
+                                <li><i class="bi bi-check-circle-fill"></i> Aqidah Lanjutan</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Fikih Muamalah Dasar</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Tafsir Ayat Pilihan</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Hadits Arba'in Nawawi</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Siroh Nabawiyah</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Nahwu Shorof Dasar</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Bahasa Arab Percakapan (Muhadatsah)</li>
+                            </ul>
+
+                            <h5 class="program-category-title">Pendidikan Umum (PKBM)</h5>
+                            <ul class="program-category-list">
+                                <li><i class="bi bi-check-circle-fill"></i> Matematika</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Ilmu Pengetahuan Alam (IPA)</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Ilmu Pengetahuan Sosial (IPS)</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Bahasa Indonesia</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Bahasa Inggris (Dasar)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Aliyah Curriculum Card -->
+                <div class="col-lg-4 animate-on-scroll">
+                    <div class="card h-100">
+                        <div class="card-header">
+                            <i class="bi bi-award icon-large"></i>
+                            Marhalah Aliyah
+                            <small class="d-block mt-1">(Setingkat SMA/MA)</small>
+                        </div>
+                        <div class="card-body text-start">
+                            <h5 class="program-category-title">Tahfizh Al-Qur'an</h5>
+                            <ul class="program-category-list">
+                                <li><i class="bi bi-check-circle-fill"></i> Target Hafalan: Juz 1-30 (penyelesaian dan mutqin)</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Metode: Murajaah intensif, Tasmi' Kubra</li>
+                            </ul>
+
+                            <h5 class="program-category-title">Diniyah & Ilmu Syari'ah</h5>
+                            <ul class="program-category-list">
+                                <li><i class="bi bi-check-circle-fill"></i> Ushul Fikih</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Ulumul Qur'an & Ulumul Hadits</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Tafsir Tematik</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Fikih Perbandingan Madzhab</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Sejarah Peradaban Islam</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Nahwu Shorof Lanjutan</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Balaghah & Adab</li>
+                            </ul>
+
+                            <h5 class="program-category-title">Pendidikan Umum (PKBM)</h5>
+                            <ul class="program-category-list">
+                                <li><i class="bi bi-check-circle-fill"></i> Matematika Lanjutan</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Ilmu Pengetahuan Alam (IPA) Lanjutan</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Ilmu Pengetahuan Sosial (IPS) Lanjutan</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Bahasa Indonesia</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Bahasa Inggris</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kegiatan Penunjang Section -->
+            <div class="row mt-5 animate-on-scroll">
+                <div class="col-12">
+                    <h3 class="section-title" style="font-size: 2rem; margin-bottom: 30px;">Kegiatan Penunjang</h3>
+                </div>
+                <div class="col-lg-10 mx-auto">
+                    <div class="card">
+                        <div class="card-body text-start">
+                            <p class="lead text-center">Selain kurikulum inti, santri juga dibekali dengan berbagai kegiatan penunjang untuk mengembangkan potensi diri dan keterampilan hidup:</p>
+                            <div class="row mt-4">
+                                <div class="col-md-6">
+                                    <ul class="program-category-list">
+                                        <li><i class="bi bi-star-fill text-warning"></i> Beladiri</li>
+                                        <li><i class="bi bi-laptop-fill text-warning"></i> Komputer</li>
+                                        <li><i class="bi bi-gear-fill text-warning"></i> Otomotif</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <ul class="program-category-list">
+                                        <li><i class="bi bi-egg-fried text-warning"></i> Tataboga</li>
+                                        <li><i class="bi bi-scissors text-warning"></i> Menjahit</li>
+                                        <li><i class="bi bi-book-half text-warning"></i> Kajian Kitab Bersama Asatidz</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="currentYear"></span> Pondok Pesantren Tahfizhul Qur'an Al Ittiba'. Semua Hak Dilindungi.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle (Popper included) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Animation on scroll
+        const animateElements = document.querySelectorAll('.animate-on-scroll');
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target); // Stop observing once animated
+                }
+            });
+        }, {
+            threshold: 0.2 // Trigger when 20% of the element is visible
+        });
+
+        animateElements.forEach(element => {
+            observer.observe(element);
+        });
+
+        // Update current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
